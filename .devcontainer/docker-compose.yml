@@ -1,0 +1,14 @@
+services:
+    node:
+        build:
+            context: ..
+            dockerfile: .devcontainer/Dockerfile
+            args:
+                CONTAINER_USER: vscode
+                CONTAINER_WORKDIR: /workspaces
+        volumes:
+            - ..:/workspaces
+        ports:
+            - "8000:8000"
+        tty: true
+        stdin_open: true

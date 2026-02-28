@@ -106,16 +106,15 @@ git switch -c draft
 
 記事ファイルはZenn Edditorの機能で簡単に生成できます。
 
-![Zenn Editor](./images/image3.png)
+![Zenn Editor](./images/image2.png)
 
 ### ★記事の執筆
 
 記事の内容は、VS Code 上で Markdown ファイルを編集して執筆します。
-Zenn Edditor をインストールしていると、プレビューを簡単に確認しながら執筆できます。
 
-以下のアイコンをクリックすると、Zenn CLI のプレビュー機能と連携して、リアルタイムで記事の見た目を確認できます。
+プレビューは `npx zenn preview` コマンドで起動したローカルサーバー上で確認できます。
 
-![Zenn Editor Preview](./images/image2.png)
+※Zenn Edditor のプレビュー機能は、編集後の内容を反映するのに一度タブを閉じて再度開く必要があるため、ローカルサーバーのプレビューで確認することを推奨します。
 
 ### ★記事を公開するとき
 

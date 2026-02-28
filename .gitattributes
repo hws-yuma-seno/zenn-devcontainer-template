@@ -1,0 +1,5 @@
+# デフォルトは自動検出
+* text=auto
+
+# Docker 関連ファイルは必ず LF
+.devcontainer/** text eol=lf

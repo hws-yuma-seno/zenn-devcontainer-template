@@ -1,6 +1,6 @@
 # Zenn Contents
 
-Zenn に投稿する記事・本を管理するリポジトリです。
+Zenn CLIとDev Containersを活用して、Zennのコンテンツをローカルで管理・プレビューするためのリポジトリテンプレートです。
 
 ## 環境構築
 

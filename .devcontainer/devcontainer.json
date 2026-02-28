@@ -23,7 +23,8 @@
         "DavidAnson.vscode-markdownlint",
         // Zenn 専用エディタ（記事プレビュー）
         "negokaz.zenn-editor",
-        "zenn.zenn-preview"
+        // テキスト校正
+        "3w36zj6.textlint"
       ],
       "settings": {
         "editor.formatOnSave": true,

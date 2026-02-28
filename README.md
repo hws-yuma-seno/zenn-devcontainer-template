@@ -61,9 +61,9 @@ Zenn は GitHub リポジトリと連携することで、`main` ブランチへ
 
 当リポジトリはテンプレートリポジトリとして公開されているため、画像のボタンから GitHub 上でリポジトリを作成できます。
 
-![Use this template](./image.png)
-
 作成した後、ローカルにクローンして VS Code で開き、Dev Container を起動してください。
+
+![Use this template](./images/image.png)
 
 ### 2. 既にオンラインエディタで作成した記事がある場合
 
@@ -80,7 +80,7 @@ Zenn は GitHub リポジトリと連携することで、`main` ブランチへ
 2. 「GitHub からのデプロイ」→「リポジトリを連携する」を選択
 3. 連携したいリポジトリを選択して保存
 
-> 連携後は `main` ブランチへ push するたびに Zenn 上の記事・本が自動で更新されます。
+連携後は `main` ブランチへ push するたびに Zenn 上の記事・本が自動で更新されます。
 
 ### 4. ブランチ運用フロー
 
@@ -91,17 +91,35 @@ main         ← Zenn が監視する公開用ブランチ
 └── draft    ← 執筆・編集作業用ブランチ（任意の名前で OK）
 ```
 
-### 新しい記事を書き始めるとき
+## 5. 記事の作成について
+
+[Zenn Edditor](https://marketplace.visualstudio.com/items?itemName=negokaz.zenn-editor)を利用して記事の作成やプレビューを行うことができます。
+
+### ★新しい記事を書き始めるとき
+
+まず、作業用のブランチを作成してから記事ファイルを生成することを推奨します。
 
 ```bash
 # 作業ブランチを作成して移動
 git switch -c draft
-
-# 記事ファイルを生成
-npx zenn new:article
 ```
 
-### 記事を公開するとき
+記事ファイルはZenn Edditorの機能で簡単に生成できます。
+
+![Zenn Editor](./images/image3.png)
+
+### ★記事の執筆
+
+記事の内容は、VS Code 上で Markdown ファイルを編集して執筆します。
+Zenn Edditor をインストールしていると、プレビューを簡単に確認しながら執筆できます。
+
+以下のアイコンをクリックすると、Zenn CLI のプレビュー機能と連携して、リアルタイムで記事の見た目を確認できます。
+
+![Zenn Editor Preview](./images/image2.png)
+
+### ★記事を公開するとき
+
+main ブランチへマージして push することで、Zenn 上に記事が公開されます。
 
 ```bash
 # main ブランチへマージして push
@@ -112,7 +130,7 @@ git push origin main
 
 push 後、数秒〜数分で Zenn 上に反映されます。
 
-### 執筆中の記事を下書き状態に保つ
+### ★執筆中の記事を下書き状態に保つ
 
 記事の Front Matter で `published: false` にしておくと、`main` へ push しても非公開のまま管理できます。  
 Publicationのメンバーにレビューしてもらう際などに便利です。
